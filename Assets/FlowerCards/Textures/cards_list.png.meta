@@ -1,0 +1,1440 @@
+fileFormatVersion: 2
+guid: 1ce4d65b6ced9e049b853d9fe817e9b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: cards_list_0
+  - first:
+      213: 21300002
+    second: cards_list_1
+  - first:
+      213: 21300004
+    second: cards_list_2
+  - first:
+      213: 21300006
+    second: cards_list_3
+  - first:
+      213: 21300008
+    second: cards_list_4
+  - first:
+      213: 21300010
+    second: cards_list_5
+  - first:
+      213: 21300012
+    second: cards_list_6
+  - first:
+      213: 21300014
+    second: cards_list_7
+  - first:
+      213: 21300016
+    second: cards_list_8
+  - first:
+      213: 21300018
+    second: cards_list_9
+  - first:
+      213: 21300020
+    second: cards_list_10
+  - first:
+      213: 21300022
+    second: cards_list_11
+  - first:
+      213: 21300024
+    second: cards_list_12
+  - first:
+      213: 21300026
+    second: cards_list_13
+  - first:
+      213: 21300028
+    second: cards_list_14
+  - first:
+      213: 21300030
+    second: cards_list_15
+  - first:
+      213: 21300032
+    second: cards_list_16
+  - first:
+      213: 21300034
+    second: cards_list_17
+  - first:
+      213: 21300036
+    second: cards_list_18
+  - first:
+      213: 21300038
+    second: cards_list_19
+  - first:
+      213: 21300040
+    second: cards_list_20
+  - first:
+      213: 21300042
+    second: cards_list_21
+  - first:
+      213: 21300044
+    second: cards_list_22
+  - first:
+      213: 21300046
+    second: cards_list_23
+  - first:
+      213: 21300048
+    second: cards_list_24
+  - first:
+      213: 21300050
+    second: cards_list_25
+  - first:
+      213: 21300052
+    second: cards_list_26
+  - first:
+      213: 21300054
+    second: cards_list_27
+  - first:
+      213: 21300056
+    second: cards_list_28
+  - first:
+      213: 21300058
+    second: cards_list_29
+  - first:
+      213: 21300060
+    second: cards_list_30
+  - first:
+      213: 21300062
+    second: cards_list_31
+  - first:
+      213: 21300064
+    second: cards_list_32
+  - first:
+      213: 21300066
+    second: cards_list_33
+  - first:
+      213: 21300068
+    second: cards_list_34
+  - first:
+      213: 21300070
+    second: cards_list_35
+  - first:
+      213: 21300072
+    second: cards_list_36
+  - first:
+      213: 21300074
+    second: cards_list_37
+  - first:
+      213: 21300076
+    second: cards_list_38
+  - first:
+      213: 21300078
+    second: cards_list_39
+  - first:
+      213: 21300080
+    second: cards_list_40
+  - first:
+      213: 21300082
+    second: cards_list_41
+  - first:
+      213: 21300084
+    second: cards_list_42
+  - first:
+      213: 21300086
+    second: cards_list_43
+  - first:
+      213: 21300088
+    second: cards_list_45
+  - first:
+      213: 21300090
+    second: cards_list_46
+  - first:
+      213: 21300092
+    second: cards_list_47
+  - first:
+      213: 21300094
+    second: cards_list_48
+  - first:
+      213: 21300096
+    second: cards_list_49
+  - first:
+      213: 21300098
+    second: cards_list_50
+  - first:
+      213: 21300100
+    second: cards_list_51
+  - first:
+      213: 21300102
+    second: cards_list_52
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cards_list_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1708
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d28319f4ef6c37f0800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1708
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6f5bcef9550e0d0800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_3
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1708
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70befa09e4761cd0800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_4
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1702
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a521afe0a56a0cce0800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_5
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1708
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96546b53a7eb358d0800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_6
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1708
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105515c70ec9b64d0800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_7
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1708
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560f35eb7f31dfbe0800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_8
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 1708
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba67bad5dd9baf3a0800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_0
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1708
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a93e246e81e8d890800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f701cbbef22be10800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_10
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81abdea3949b3ac0800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_11
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9865692c053649e0800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_12
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba1ce994cf9fe4f0800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_13
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c33cde9aa2dd5f20800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_14
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a6b9e5d43aad0a20800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_15
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc88810b27392ed00800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_16
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5b001a13ab95000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_17
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1368
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37436d15f7b9af380800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4682654bc8c6030a0800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_19
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d3fecd458bd55a0800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_20
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0954bfcf431805580800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_21
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e749f812ea86a1e0800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_22
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540cbb112d91e69d0800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_23
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb7bd03ef7cd21b0800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_24
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bfed839b7e4df9f0800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_25
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b7d0678b1e5d4f0800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_26
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1028
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0243687323f2f30800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7812717519c1ea100800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_28
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d3b6ccf14687d80800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_29
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d727068051daf9cc0800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_30
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167bf008b0e9b5fc0800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_31
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ceeaee1b7eb0800800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_32
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b8897b53c835b10800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_33
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b3c30d9e38d0280800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_34
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266be6b26f8ef3270800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_35
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 688
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e8e2243f0e89740800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fdec8bbf54334c0800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_37
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 348
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf582e1e5426b81c0800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_38
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 348
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab675bd6ada09ec80800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_39
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 348
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f5b373c993e2140800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_40
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 348
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2743bcac62afa3c40800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_41
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 348
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b72b7e44fdb49c0800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_42
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 348
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb1fe336fc992440800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_43
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 348
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94bfe73ad01aa1ec0800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3273af62ce2782f50800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_45
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 8
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6065896f2619e46c0800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_46
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 8
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da25e2a5ae20b1a40800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_47
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 8
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdbe5279d38488df0800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_48
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 8
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2345275b447819140800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_49
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 8
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b805368ff877d50800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_50
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 8
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee24d2fa4d49b4f0800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cards_list_51
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 8
+        width: 226
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951a5ed8a54781b50800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fb3940996a26a85468b2b96ed4c4242d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cards_list_0: 21300016
+      cards_list_1: 21300000
+      cards_list_10: 21300020
+      cards_list_11: 21300022
+      cards_list_12: 21300024
+      cards_list_13: 21300026
+      cards_list_14: 21300028
+      cards_list_15: 21300030
+      cards_list_16: 21300032
+      cards_list_17: 21300034
+      cards_list_18: 21300036
+      cards_list_19: 21300038
+      cards_list_2: 21300002
+      cards_list_20: 21300040
+      cards_list_21: 21300042
+      cards_list_22: 21300044
+      cards_list_23: 21300046
+      cards_list_24: 21300048
+      cards_list_25: 21300050
+      cards_list_26: 21300052
+      cards_list_27: 21300054
+      cards_list_28: 21300056
+      cards_list_29: 21300058
+      cards_list_3: 21300004
+      cards_list_30: 21300060
+      cards_list_31: 21300062
+      cards_list_32: 21300064
+      cards_list_33: 21300066
+      cards_list_34: 21300068
+      cards_list_35: 21300070
+      cards_list_36: 21300072
+      cards_list_37: 21300074
+      cards_list_38: 21300076
+      cards_list_39: 21300078
+      cards_list_4: 21300006
+      cards_list_40: 21300080
+      cards_list_41: 21300082
+      cards_list_42: 21300084
+      cards_list_43: 21300086
+      cards_list_44: 21300088
+      cards_list_45: 21300090
+      cards_list_46: 21300092
+      cards_list_47: 21300094
+      cards_list_48: 21300096
+      cards_list_49: 21300098
+      cards_list_5: 21300008
+      cards_list_50: 21300100
+      cards_list_51: 21300102
+      cards_list_6: 21300010
+      cards_list_7: 21300012
+      cards_list_8: 21300014
+      cards_list_9: 21300000
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2474606132164691937}
   - component: {fileID: 2195744056658452325}
+  - component: {fileID: -1319906088703231952}
+  - component: {fileID: 4312562881522843638}
   m_Layer: 0
   m_Name: cards
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ce4d65b6ced9e049b853d9fe817e9b1, type: 3}
+  m_Sprite: {fileID: 21300016, guid: 1ce4d65b6ced9e049b853d9fe817e9b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,3 +86,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1319906088703231952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722796600285052032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954ce368828a67c4982c3dc83797432f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  render: {fileID: 2195744056658452325}
+  WayPoint: {fileID: 0}
+  Back: {fileID: 21300016, guid: 1ce4d65b6ced9e049b853d9fe817e9b1, type: 3}
+  front: {fileID: 21300016, guid: 1ce4d65b6ced9e049b853d9fe817e9b1, type: 3}
+  isEnemyCard: 0
+--- !u!65 &4312562881522843638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722796600285052032}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.5, y: 11, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

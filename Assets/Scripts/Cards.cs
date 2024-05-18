@@ -1,35 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Cards : MonoBehaviour
+public class Cards : MonoBehaviour, IPointerClickHandler
 {
+    public Animator ani;
     public SpriteRenderer render;
     public Transform WayPoint;
-    public Sprite Back, front;
+    public Sprite front;
     public bool isEnemyCard = false;
+    public BoxCollider box;
 
     private Vector3 bezierPos;
+
     void Start()
     {
-        if (isEnemyCard)
-            render.sprite = Back;
-        else
-            render.sprite = front;
-        
-        StartCoroutine(BezireMove());
+        render.sprite = front;
+        StartCoroutine(CardMove(transform.position, WayPoint.position, 5f));
     }
 
-    IEnumerator BezireMove()
+    public void Move(Vector3 start, Vector3 end, float speed)
     {
-        for (float t = 0; t < 1; t += Time.deltaTime)
+        StartCoroutine(CardMove(start, end, speed));
+    }
+
+    IEnumerator CardMove(Vector3 start, Vector3 end, float speed)
+    {
+        for (float t = 0; t < 1; t += Time.deltaTime * speed)
         {
-            // 조절점이 2개일 때 베지어 곡선 공식
-            bezierPos = (1 - t) * gameObject.transform.position +
-                        t * WayPoint.position;
-            bezierPos.z = 0;
-            transform.position = bezierPos;
+            transform.position = Vector3.Lerp(start, end, t);
             yield return null;
         }
+        transform.position = Vector3.Lerp(start, end, 1);
+
+        if (!isEnemyCard)
+            ani.SetTrigger("Flip");
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        ani.SetTrigger("Click");
     }
 }

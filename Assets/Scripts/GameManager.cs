@@ -47,15 +47,15 @@ public class GameManager : MonoBehaviour
         {
             for (int j = 0; j < 4; j++) // 바닥 패 4장
             {
-                GameObject temp = Instantiate(prefab, Vector2.zero, Quaternion.identity);
+                GameObject temp = Instantiate(prefab, new Vector3(-10, 0, 0), Quaternion.identity);
                 Cards tmpCard = temp.GetComponent<Cards>();
-                temp.transform.SetParent(cardList.transform);
+                //temp.transform.SetParent(cardList.transform);
                 tmpCard.front = flowerCards[idx];
                 tmpCard.WayPoint = wayPoints[idx - 1];
                 idx++;
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.33f);
 
             for (int j = 0; j < 10; j++) // 플레이어 & 상대 패 5장씩
             {
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
                 idx++;
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.33f);
         }
     }
 

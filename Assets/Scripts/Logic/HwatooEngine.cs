@@ -40,6 +40,7 @@ public class HwatooEngine
     public void reset()
     {
         CManager.makeCards();
+        FManager.reset();
     }
 
     void shuffle()

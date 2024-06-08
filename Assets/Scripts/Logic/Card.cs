@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public enum CardType : byte
+public enum CardType
 {
     P, // 피
     K, // 광
@@ -10,7 +10,7 @@ public enum CardType : byte
     T // 띠
 }
 
-public enum CardStat : byte
+public enum CardStat
 {
     // 고도리, 초단, 청단, 홍단, 쌍피, 
     NONE,
@@ -23,17 +23,17 @@ public enum CardStat : byte
 
 public class Card
 {
-    private CardType CType;
-    private CardStat CStat;
+    public CardType CType { get; private set; }
+    public CardStat CStat { get; private set; }
 
     // 1 ~ 12월
-    public byte number { get; private set; }
+    public int number { get; private set; }
 
     // 1 ~ 4
-    public byte position { get; private set; }
+    public int position { get; private set; }
 
     // 생성자
-    public Card(byte num, byte pos, CardType type, CardStat stat = CardStat.NONE)
+    public Card(int num, int pos, CardType type, CardStat stat = CardStat.NONE)
     {
         this.number = num;
         this.position = pos;

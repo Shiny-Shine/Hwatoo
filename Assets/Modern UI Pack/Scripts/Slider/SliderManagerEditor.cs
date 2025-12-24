@@ -56,6 +56,7 @@ namespace Michsky.MUIP
             var minValue = serializedObject.FindProperty("minValue");
             var maxValue = serializedObject.FindProperty("maxValue");
             var invokeOnAwake = serializedObject.FindProperty("invokeOnAwake");
+            var decimalFormat = serializedObject.FindProperty("decimalFormat");
 
             switch (currentTab)
             {
@@ -131,6 +132,8 @@ namespace Michsky.MUIP
                         EditorGUILayout.HelpBox("Each slider should has its own unique tag.", MessageType.Info);
                     }
 
+                    MUIPEditorHandler.DrawProperty(decimalFormat, customSkin, "Decimal Format");
+
                     MUIPEditorHandler.DrawHeader(customSkin, "UIM Header", 10);
 
                     if (tempUIM != null)
@@ -140,7 +143,7 @@ namespace Michsky.MUIP
                         tempUIM.overrideFonts = MUIPEditorHandler.DrawToggle(tempUIM.overrideFonts, customSkin, "Override Fonts");
 
                         if (GUILayout.Button("Open UI Manager", customSkin.button))
-                            EditorApplication.ExecuteMenuItem("Tools/Modern UI Pack/Show UI Manager");
+                            EditorApplication.ExecuteMenuItem(MUIPEditorHandler.UIM_SHORTCUT);
 
                         if (GUILayout.Button("Disable UI Manager Connection", customSkin.button))
                         {

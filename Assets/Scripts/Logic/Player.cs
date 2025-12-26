@@ -10,7 +10,7 @@ public class Player
 
     public int score { get; private set; }
     public int goCnt { get; private set; }
-    public int fxxkCnt { get; private set; }
+    public int fuckCnt { get; private set; }
     public int shakeCnt { get; private set; }
     public int bombCnt { get; private set; }
 
@@ -27,7 +27,7 @@ public class Player
     {
         score = 0;
         goCnt = 0;
-        fxxkCnt = 0;
+        fuckCnt = 0;
         shakeCnt = 0;
         bombCnt = 0;
         handCard.Clear();

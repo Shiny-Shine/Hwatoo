@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
+
     public static GameManager singleton;
 
     // void Awake()

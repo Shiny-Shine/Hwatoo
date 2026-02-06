@@ -136,4 +136,10 @@ public class FloorManager
 
         startCards.Clear();
     }
+
+    public List<Card> GetMatchingCards(int number)
+    {
+        var slot = findSlot(number);
+        return slot?.cards ?? new List<Card>();
+    }
 }

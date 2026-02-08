@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 // 바닥에 놓인 카드 슬롯, 같은 번호의 카드를 묶어서 보관.
 public class CardSlot

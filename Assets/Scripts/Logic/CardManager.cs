@@ -1,10 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System;
 
+// 카드 뭉치를 만들고 관리
 public class CardManager
 {
     private List<Card> cards;
+    private Random rand = new Random();
 
     public CardManager()
     {
@@ -33,8 +34,8 @@ public class CardManager
     {
         for (int i = 0; i < 200; i++)
         {
-            int first = Random.Range(1, cards.Count);
-            int second = Random.Range(1, cards.Count);
+            int first = rand.Next(cards.Count);
+            int second = rand.Next(cards.Count);
             swap(first, second);
         }
     }

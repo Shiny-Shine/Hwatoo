@@ -79,4 +79,12 @@ public class HwatooEngine
         
         FManager.refreshFloor();
     }
+    
+    public void ProcessTurn(Card selectedHandCard, Card selectedFloorCard)
+    {
+        
+        // TODO: 플레이어가 선택한 카드를 바닥에 놓기
+
+        // TODO: 턴 종료 및 다음 플레이어로 전환
+    }
 }

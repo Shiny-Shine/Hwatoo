@@ -43,6 +43,11 @@ public class Player
             floorCards.Add(card.CType, new List<Card>());
         floorCards[card.CType].Add(card);
     }
+    
+    public void AddScore(int points)
+    {
+        score += points;
+    }
 
     public Card popCard(int num, int pos, CardType type)
     {

@@ -130,7 +130,7 @@ public class FloorManager
 
     public void refreshFloor()
     {
-        for (int i = 1; i < startCards.Count; i++)
+        for (int i = 0; i < startCards.Count; i++)
             addCard(startCards[i]);
 
         startCards.Clear();

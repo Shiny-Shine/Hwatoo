@@ -5,7 +5,8 @@ public class Player
 {
     private int playerIdx;
     private List<Card> handCard;
-    private Dictionary<CardType, List<Card>> floorCards;
+    private Dictionary<CardType, int> typeCount;
+    // TODO:Dictionary<CardType, List<Card>> 형태에서 변경함, 영향을 미치는 코드 점검 필요.
 
     public int score { get; private set; }
     public int goCnt { get; private set; }
@@ -22,7 +23,7 @@ public class Player
         handCard = new List<Card>();
     }
 
-    public void reset()
+    public void Reset()
     {
         score = 0;
         goCnt = 0;
@@ -32,16 +33,16 @@ public class Player
         handCard.Clear();
     }
 
-    public void addCard(Card card)
+    public void AddCard(Card card)
     {
         handCard.Add(card);
     }
 
-    public void addCardFloor(Card card)
+    public void AddCardFloor(Card card)
     {
-        if(!floorCards.ContainsKey(card.CType))
-            floorCards.Add(card.CType, new List<Card>());
-        floorCards[card.CType].Add(card);
+        if(!typeCount.ContainsKey(card.CType))
+            typeCount.Add(card.CType, new List<Card>());
+        typeCount[card.CType].Add(card);
     }
     
     public void AddScore(int points)
@@ -49,7 +50,7 @@ public class Player
         score += points;
     }
 
-    public Card popCard(int num, int pos, CardType type)
+    public Card PopCard(int num, int pos, CardType type)
     {
         Card card = handCard.Find(o => { return o.number == num && o.CType == type && o.position == pos; });
 
@@ -60,7 +61,7 @@ public class Player
         return card;
     }
 
-    public List<Card> popAllCard(int num)
+    public List<Card> PopAllCard(int num)
     {
         List<Card> cards = handCard.FindAll(o => o.number == num);
         
@@ -70,10 +71,10 @@ public class Player
         return cards;
     }
 
-    private List<Card> findCards(CardType type)
+    private List<Card> FindCards(CardType type)
     {
-        if (floorCards.ContainsKey(type))
-            return floorCards[type];
+        if (typeCount.ContainsKey(type))
+            return typeCount[type];
 
         return null;
     }

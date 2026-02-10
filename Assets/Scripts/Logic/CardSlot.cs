@@ -12,15 +12,15 @@ public class CardSlot
     {
         cards = new List<Card>();
         this.position = position;
-        reset();
+        Reset();
     }
 
-    public void reset()
+    public void Reset()
     {
         cards.Clear();
     }
 
-    public bool isSame(int num)
+    public bool IsSame(int num)
     {
         if (cards.Count <= 0)
             return false;
@@ -28,17 +28,17 @@ public class CardSlot
         return cards[0].number == num;
     }
 
-    public void addCard(Card card)
+    public void AddCard(Card card)
     {
         cards.Add(card);
     }
     
-    public void removeCard(Card card)
+    public void RemoveCard(Card card)
     {
         cards.Remove(card);
     }
 
-    public bool isEmpty()
+    public bool IsEmpty()
     {
         return cards.Count <= 0;
     }

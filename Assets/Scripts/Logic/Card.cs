@@ -13,12 +13,12 @@ public enum CardType
 public enum CardStat
 {
     // 고도리, 초단, 청단, 홍단, 쌍피, 
-    NONE,
-    GODORI,
-    CHODAN,
-    CHEONGDAN,
-    HONGDAN,
-    SP
+    None,
+    Godori,
+    Chodan,
+    Cheongdan,
+    Hongdan,
+    Sp
 }
 
 public class Card
@@ -33,22 +33,22 @@ public class Card
     public int position { get; private set; }
 
     // 생성자
-    public Card(int num, int pos, CardType type, CardStat stat = CardStat.NONE)
+    public Card(int num, int pos, CardType type, CardStat stat = CardStat.None)
     {
         this.number = num;
         this.position = pos;
         this.CType = type;
-        this.CStat = CardStat.NONE;
+        this.CStat = CardStat.None;
     }
 
     // setter
-    public void setCardType(CardType type)
+    public void SetCardType(CardType type)
     {
         this.CType = type;
     }
 
     // setter
-    public void setCardStat(CardStat stat)
+    public void SetCardStat(CardStat stat)
     {
         this.CStat = stat;
     }

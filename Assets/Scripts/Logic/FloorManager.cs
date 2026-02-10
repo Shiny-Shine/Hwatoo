@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class FloorManager
 {
-    private const int slotCnt = 12;
+    private const int SlotCnt = 12;
     private List<Card> startCards;
 
     // 같은 번호를 하나의 슬롯에 묶어서 보관.
@@ -14,50 +14,51 @@ public class FloorManager
         slots = new List<CardSlot>();
 
         // 바닥에 12개까지 카드를 놓을 수 있음.
-        for (int i = 1; i <= slotCnt; i++)
+        for (int i = 1; i <= SlotCnt; i++)
             slots.Add(new CardSlot(i));
 
         startCards = new List<Card>();
     }
 
-    public void reset()
+    public void Reset()
     {
         startCards.Clear();
-        for (int i = 1; i <= slotCnt; i++)
+        for (int i = 1; i <= SlotCnt; i++)
         {
-            slots[i].reset();
+            slots[i].Reset();
         }
     }
 
-    public bool isEmpty()
+    public bool IsEmpty()
     {
         for (int i = 1; i < slots.Count; i++)
         {
-            if (!slots[i].isEmpty())
+            if (!slots[i].IsEmpty())
                 return false;
         }
 
         return true;
     }
 
-    public void addStartCard(Card card)
+    public void AddStartCard(Card card)
     {
         startCards.Add(card);
     }
 
-    CardSlot findSlot(int num)
+    CardSlot FindSlot(int num)
     {
-        CardSlot slot = slots.Find(o => o.isSame(num));
+        // 같은 번호의 슬롯을 찾는다(람다식 사용).
+        CardSlot slot = slots.Find(o => o.IsSame(num));
         return slot;
     }
 
-    CardSlot findEmptySlot()
+    CardSlot FindEmptySlot()
     {
-        CardSlot slot = slots.Find(o => o.isEmpty());
+        CardSlot slot = slots.Find(o => o.IsEmpty());
         return slot;
     }
 
-    public int floorCardCount()
+    public int FloorCardCount()
     {
         int cnt = 0;
         for (int i = 1; i <= slots.Count; i++)
@@ -66,45 +67,46 @@ public class FloorManager
         return cnt;
     }
 
-    public int getSlotStack(int num)
+    public int GetSlotStack(int num)
     {
-        CardSlot slot = findSlot(num);
+        CardSlot slot = FindSlot(num);
         if (slot == null)
             return 0;
         return slot.cards.Count;
     }
 
     // 해당 위치에 카드를 놓는다.
-    public void addCard(Card card)
+    public CardSlot AddCard(Card card)
     {
         // 해당 카드가 있는 슬롯을 찾고
-        CardSlot curSlot = findSlot(card.number);
+        CardSlot curSlot = FindSlot(card.number);
         // 없다면 빈 슬롯 아무데나 놓기
         if (curSlot == null)
         {
-            curSlot = findEmptySlot();
-            curSlot.addCard(card);
-            return;
+            curSlot = FindEmptySlot();
+            curSlot.AddCard(card);
+            return curSlot;
         }
 
-        slots[curSlot.position].addCard(card);
+        slots[curSlot.position].AddCard(card);
+        return curSlot;
     }
 
-    public void removeCard(Card card)
+    public void RemoveCard(Card card)
     {
-        CardSlot slot = findSlot(card.number);
+        CardSlot slot = FindSlot(card.number);
         // 비어있으면 그냥 리턴
         if (slot != null)
         {
-            slot.removeCard(card);
+            slot.RemoveCard(card);
         }
         else
             UnityEngine.Debug.Log("[delCard]CardSlot is Empty");
     }
 
-    public Card getCard(int num)
+    public Card GetCard(int num)
     {
-        CardSlot slot = findSlot(num);
+        CardSlot slot = FindSlot(num);
 
         if (slot == null)
             return null;
@@ -112,7 +114,7 @@ public class FloorManager
         return slot.cards[0];
     }
 
-    public List<Card> removeBonusCard()
+    public List<Card> RemoveBonusCard()
     {
         List<Card> bonusCards = new List<Card>();
 
@@ -128,17 +130,17 @@ public class FloorManager
         return bonusCards;
     }
 
-    public void refreshFloor()
+    public void RefreshFloor()
     {
         for (int i = 0; i < startCards.Count; i++)
-            addCard(startCards[i]);
+            AddCard(startCards[i]);
 
         startCards.Clear();
     }
 
-    public List<Card> GetMatchingCards(int number)
+    public bool GetMatchingCards(int number)
     {
-        var slot = findSlot(number);
-        return slot?.cards ?? new List<Card>();
+        var slot = FindSlot(number);
+        return slot != null;
     }
 }

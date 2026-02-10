@@ -4,53 +4,53 @@ using System;
 
 public class HwatooEngine
 {
-    private CardManager CManager;
+    private CardManager cManager;
     private Queue<Card> cardQ;
 
     public FloorManager FManager { get; private set; }
 
     // 카드 정보 저장
     public List<Card> floorCards { get; private set; }
-    public List<Card> playerCards { get; private set; }
-    public List<Card> enemyCards { get; private set; }
+    public List<Card> PlayerHandCards { get; private set; }
+    public List<Card> EnemyHandCards { get; private set; }
 
     public HwatooEngine()
     {
-        CManager = new CardManager();
+        cManager = new CardManager();
         FManager = new FloorManager();
         cardQ = new Queue<Card>();
     }
 
-    public void clearData()
+    public void ClearData()
     {
         
     }
 
-    public void start()
+    public void Start()
     {
-        shuffle();
-        cardDistribution();
+        Shuffle();
+        CardDistribution();
     }
 
-    Card popCard()
+    Card PopCard()
     {
         return cardQ.Dequeue();
     }
 
-    public void reset()
+    public void Reset()
     {
-        CManager.makeCards();
-        FManager.reset();
+        cManager.MakeCards();
+        FManager.Reset();
     }
 
-    void shuffle()
+    void Shuffle()
     {
         cardQ.Clear();
-        CManager.shuffle();
-        cardQ = CManager.exportToQ();
+        cManager.Shuffle();
+        cardQ = cManager.ExportToQ();
     }
 
-    void cardDistribution()
+    void CardDistribution()
     {
         int flooridx = 0;
 
@@ -60,31 +60,34 @@ public class HwatooEngine
             // 바닥 패 4장
             for (int i = 0; i < 4; i++)
             {
-                floorCards.Add(popCard());
+                floorCards.Add(PopCard());
                 flooridx++;
             }
 
             // 플레이어 5장.
             for (int i = 0; i < 5; ++i)
             {
-                playerCards.Add(popCard());
+                PlayerHandCards.Add(PopCard());
             }
 
             // 상대 5장.
             for (int i = 0; i < 5; ++i)
             {
-                enemyCards.Add(popCard());
+                EnemyHandCards.Add(PopCard());
             }
         }
         
-        FManager.refreshFloor();
+        FManager.RefreshFloor();
     }
     
-    public void ProcessTurn(Card selectedHandCard, Card selectedFloorCard)
+    public void ProcessTurn(Card selectedHandCard)
     {
+        CardSlot curSlot;
+        // 1. 플레이어가 선택한 카드를 바닥에 놓는다.
+        curSlot = FManager.AddCard(selectedHandCard);
         
-        // TODO: 플레이어가 선택한 카드를 바닥에 놓기
-
-        // TODO: 턴 종료 및 다음 플레이어로 전환
+        // 2. 바닥에 놓인 카드들 중에서 같은 번호의 카드들을 모두 가져온다.
+        // TODO:현재 플레이어가 선택한 카드를 바닥에 놓은 후 뻑 계산 후 피로 가져오는 과정 구현 중.
+        
     }
 }

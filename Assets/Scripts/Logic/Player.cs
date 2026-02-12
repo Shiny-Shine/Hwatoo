@@ -40,9 +40,7 @@ public class Player
 
     public void AddCardFloor(Card card)
     {
-        if(!typeCount.ContainsKey(card.CType))
-            typeCount.Add(card.CType, new List<Card>());
-        typeCount[card.CType].Add(card);
+        // 함수 기능에 대한 점검 필요.
     }
     
     public void AddScore(int points)
@@ -71,11 +69,11 @@ public class Player
         return cards;
     }
 
-    private List<Card> FindCards(CardType type)
+    private bool FindCards(CardType type)
     {
         if (typeCount.ContainsKey(type))
-            return typeCount[type];
+            return true;
 
-        return null;
+        return false;
     }
 }

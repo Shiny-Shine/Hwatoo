@@ -86,7 +86,17 @@ public class HwatooEngine
         // 1. 플레이어가 선택한 카드를 바닥에 놓는다.
         curSlot = FManager.AddCard(selectedHandCard);
         
-        // 2. 바닥에 놓인 카드들 중에서 같은 번호의 카드들을 모두 가져온다.
+        Card drawnCard = PopCard();
+        // 2. 뽑은 카드가 같은 번호면 뻑, 세 장 모두 바닥에 놓는다.
+        if (curSlot.IsSame(drawnCard.number))
+        {
+            FManager.AddCard(drawnCard);
+            
+            if (curSlot.cards.Count == 2)   // 이 경우엔 뻑이 아니라 쪽
+            {
+                
+            }
+        }
         // TODO:현재 플레이어가 선택한 카드를 바닥에 놓은 후 뻑 계산 후 피로 가져오는 과정 구현 중.
         
     }

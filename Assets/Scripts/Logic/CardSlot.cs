@@ -32,11 +32,6 @@ public class CardSlot
     {
         cards.Add(card);
     }
-    
-    public void RemoveCard(Card card)
-    {
-        cards.Remove(card);
-    }
 
     public bool IsEmpty()
     {

@@ -8,17 +8,16 @@ public class HwatooEngine
     private Queue<Card> cardQ;
 
     public FloorManager FManager { get; private set; }
-
-    // 카드 정보 저장
-    public List<Card> floorCards { get; private set; }
-    public List<Card> PlayerHandCards { get; private set; }
-    public List<Card> EnemyHandCards { get; private set; }
+    public Player[] players { get; private set; }
 
     public HwatooEngine()
     {
         cManager = new CardManager();
         FManager = new FloorManager();
         cardQ = new Queue<Card>();
+        players = new Player[2];
+        players[0] = new Player(0);   // user
+        players[1] = new Player(1);   // enemy
     }
 
     public void ClearData()
@@ -52,52 +51,62 @@ public class HwatooEngine
 
     void CardDistribution()
     {
-        int flooridx = 0;
-
         // 2번 반복
         for (int t = 0; t < 2; t++)
         {
             // 바닥 패 4장
             for (int i = 0; i < 4; i++)
             {
-                floorCards.Add(PopCard());
-                flooridx++;
+                FManager.AddStartCard(PopCard());
             }
 
             // 플레이어 5장.
             for (int i = 0; i < 5; ++i)
             {
-                PlayerHandCards.Add(PopCard());
+                players[0].AddCard(PopCard());
             }
 
             // 상대 5장.
             for (int i = 0; i < 5; ++i)
             {
-                EnemyHandCards.Add(PopCard());
+                players[1].AddCard(PopCard());
             }
         }
         
         FManager.RefreshFloor();
     }
     
-    public void ProcessTurn(Card selectedHandCard)
+    public void ProcessTurn(Card selectedHandCard, int playerIdx)
     {
-        CardSlot curSlot;
         // 1. 플레이어가 선택한 카드를 바닥에 놓는다.
-        curSlot = FManager.AddCard(selectedHandCard);
+        CardSlot firstSlot = FManager.PutCard(selectedHandCard);
         
         Card drawnCard = PopCard();
         // 2. 뽑은 카드가 같은 번호면 뻑, 세 장 모두 바닥에 놓는다.
-        if (curSlot.IsSame(drawnCard.number))
+        if (firstSlot.IsSame(drawnCard.number))
         {
-            FManager.AddCard(drawnCard);
+            firstSlot = FManager.PutCard(drawnCard);
             
-            if (curSlot.cards.Count == 2)   // 이 경우엔 뻑이 아니라 쪽
+            if (firstSlot.cards.Count == 2)   // 이 경우엔 뻑이 아니라 쪽
             {
-                
+                players[playerIdx].AddCardFloor(firstSlot.cards[0]);
+                players[playerIdx].AddCardFloor(firstSlot.cards[1]);
+                // TODO: 상대방의 피를 한 장 가져오는 로직 구현 필요
+                firstSlot.Reset();
+                return;
+            }
+            
+            players[playerIdx].getfuck();
+        }
+        else
+        {
+            CardSlot secondSlot = FManager.PutCard(drawnCard);
+            if (secondSlot.cards.Count >= 2)
+            {
+                for(int i = 0; i < secondSlot.cards.Count; i++)
+                    players[playerIdx].AddCardFloor(secondSlot.cards[i]);
+                secondSlot.Reset();
             }
         }
-        // TODO:현재 플레이어가 선택한 카드를 바닥에 놓은 후 뻑 계산 후 피로 가져오는 과정 구현 중.
-        
     }
 }

@@ -40,7 +40,7 @@ public class Player
 
     public void AddCardFloor(Card card)
     {
-        // 함수 기능에 대한 점검 필요.
+        typeCount[card.CType]++;
     }
     
     public void AddScore(int points)
@@ -75,5 +75,10 @@ public class Player
             return true;
 
         return false;
+    }
+    
+    public void getfuck()
+    {
+        fuckCnt++;
     }
 }

@@ -31,7 +31,7 @@ public class HwatooEngine
         CardDistribution();
     }
 
-    Card PopCard()
+    Card PopMainDeck()
     {
         return cardQ.Dequeue();
     }
@@ -48,6 +48,12 @@ public class HwatooEngine
         cManager.Shuffle();
         cardQ = cManager.ExportToQ();
     }
+    
+    void TakeJunk(int cnt, int playerIdx)
+    {
+        players[playerIdx].AddCardFloor(CardType.P, 1);
+        players[(playerIdx + 1) % 2].PopPlayerFloor(CardType.P, 1);
+    }
 
     void CardDistribution()
     {
@@ -57,19 +63,19 @@ public class HwatooEngine
             // 바닥 패 4장
             for (int i = 0; i < 4; i++)
             {
-                FManager.AddStartCard(PopCard());
+                FManager.AddStartCard(PopMainDeck());
             }
 
             // 플레이어 5장.
             for (int i = 0; i < 5; ++i)
             {
-                players[0].AddCard(PopCard());
+                players[0].AddPlayerHand(PopMainDeck());
             }
 
             // 상대 5장.
             for (int i = 0; i < 5; ++i)
             {
-                players[1].AddCard(PopCard());
+                players[1].AddPlayerHand(PopMainDeck());
             }
         }
         
@@ -81,7 +87,7 @@ public class HwatooEngine
         // 1. 플레이어가 선택한 카드를 바닥에 놓는다.
         CardSlot firstSlot = FManager.PutCard(selectedHandCard);
         
-        Card drawnCard = PopCard();
+        Card drawnCard = PopMainDeck();
         // 2. 뽑은 카드가 같은 번호면 뻑, 세 장 모두 바닥에 놓는다.
         if (firstSlot.IsSame(drawnCard.number))
         {
@@ -89,24 +95,30 @@ public class HwatooEngine
             
             if (firstSlot.cards.Count == 2)   // 이 경우엔 뻑이 아니라 쪽
             {
-                players[playerIdx].AddCardFloor(firstSlot.cards[0]);
-                players[playerIdx].AddCardFloor(firstSlot.cards[1]);
-                // TODO: 상대방의 피를 한 장 가져오는 로직 구현 필요
+                players[playerIdx].AddCardFloor(TODO, TODO);
+                players[playerIdx].AddCardFloor(TODO, TODO);
+                TakeJunk(1, playerIdx);
                 firstSlot.Reset();
                 return;
             }
             
             players[playerIdx].getfuck();
         }
-        else
+        else // 뽑은 카드가 같은 번호가 아님.
         {
             CardSlot secondSlot = FManager.PutCard(drawnCard);
             if (secondSlot.cards.Count >= 2)
             {
                 for(int i = 0; i < secondSlot.cards.Count; i++)
-                    players[playerIdx].AddCardFloor(secondSlot.cards[i]);
+                    players[playerIdx].AddCardFloor(TODO, TODO);
                 secondSlot.Reset();
             }
+        }
+        
+        // 판쓰리
+        if(FManager.IsEmpty())
+        {
+            TakeJunk(1, playerIdx);
         }
     }
 }

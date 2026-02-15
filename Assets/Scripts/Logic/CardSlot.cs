@@ -6,13 +6,21 @@ public class CardSlot
 {
     // 바닥 슬롯 중 해당 슬롯의 번호
     public int position { get; private set; }
-    public List<Card> cards { get; private set; }
+    public Stack<Card> cards { get; private set; }
 
     public CardSlot(int position)
     {
-        cards = new List<Card>();
+        cards = new Stack<Card>();
         this.position = position;
         Reset();
+    }
+    
+    public Card PopTopCard()
+    {
+        if (cards.Count <= 0)
+            return null;
+
+        return cards.Pop();
     }
 
     public void Reset()
@@ -22,15 +30,19 @@ public class CardSlot
 
     public bool IsSame(int num)
     {
-        if (cards.Count <= 0)
-            return false;
+        if (!IsEmpty())
+            return cards.Peek().number == num;
+        
+        UnityEngine.Debug.Log("[CardSlot/IsSame]slot is empty");
+        return false;
 
-        return cards[0].number == num;
     }
 
-    public void AddCard(Card card)
+    public void PushCard(Card card)
     {
-        cards.Add(card);
+        if (!IsSame(card.number))
+            return;
+        cards.Push(card);
     }
 
     public bool IsEmpty()

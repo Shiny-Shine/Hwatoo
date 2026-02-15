@@ -84,11 +84,11 @@ public class FloorManager
 		if (curSlot == null)
 		{
 			curSlot = FindEmptySlot();
-			curSlot.AddCard(card);
+			curSlot.PushCard(card);
 			return curSlot;
 		}
 
-		slots[curSlot.position].AddCard(card);
+		slots[curSlot.position].PushCard(card);
 		return curSlot;
 	}
 

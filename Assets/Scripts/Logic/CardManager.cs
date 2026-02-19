@@ -103,5 +103,8 @@ public class CardManager
         this.cards.Add(new Card(12, 2, CardType.Y));
         this.cards.Add(new Card(12, 3, CardType.T));
         this.cards.Add(new Card(12, 4, CardType.P, CardStat.Sp));
+        // Á¶Ä¿
+        this.cards.Add(new Card(13, 1, CardType.P, CardStat.Sp));
+        this.cards.Add(new Card(13, 2, CardType.P, CardStat.Sp));
     }
 }

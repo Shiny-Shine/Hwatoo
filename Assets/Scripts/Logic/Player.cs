@@ -18,9 +18,9 @@ public class Player
 	public Player(int idx)
 	{
 		playerIdx = idx;
-		score = 0;
-		bombCnt = 0;
 		handCard = new List<Card>();
+		typeCount = new Dictionary<CardType, int>();
+		Reset();
 	}
 
 	public void Reset()
@@ -31,6 +31,11 @@ public class Player
 		shakeCnt = 0;
 		bombCnt = 0;
 		handCard.Clear();
+		typeCount.Clear();
+		typeCount[CardType.P] = 0;
+		typeCount[CardType.K] = 0;
+		typeCount[CardType.Y] = 0;
+		typeCount[CardType.T] = 0;
 	}
 
 	public void AddPlayerHand(Card card)

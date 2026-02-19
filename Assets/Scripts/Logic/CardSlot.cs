@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -33,15 +34,12 @@ public class CardSlot
         if (!IsEmpty())
             return cards.Peek().number == num;
         
-        UnityEngine.Debug.Log("[CardSlot/IsSame]slot is empty");
         return false;
 
     }
 
     public void PushCard(Card card)
     {
-        if (!IsSame(card.number))
-            return;
         cards.Push(card);
     }
 

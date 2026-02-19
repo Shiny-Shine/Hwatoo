@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 
@@ -20,13 +20,9 @@ public class HwatooEngine
         players[1] = new Player(1);   // enemy
     }
 
-    public void ClearData()
-    {
-        
-    }
-
     public void Start()
     {
+        Reset();
         Shuffle();
         CardDistribution();
     }
@@ -36,8 +32,10 @@ public class HwatooEngine
         return cardQ.Dequeue();
     }
 
-    public void Reset()
+    private void Reset()
     {
+        players[0].Reset();
+        players[1].Reset();
         cManager.MakeCards();
         FManager.Reset();
     }
@@ -49,6 +47,7 @@ public class HwatooEngine
         cardQ = cManager.ExportToQ();
     }
     
+    // 상대방의 피를 가져옴
     void TakeJunk(int cnt, int playerIdx)
     {
         players[playerIdx].AddCardFloor(CardType.P, 1);
@@ -95,8 +94,17 @@ public class HwatooEngine
             
             if (firstSlot.cards.Count == 2)   // 이 경우엔 뻑이 아니라 쪽
             {
-                players[playerIdx].AddCardFloor(TODO, TODO);
-                players[playerIdx].AddCardFloor(TODO, TODO);
+                players[playerIdx].AddCardFloor(firstSlot.PopTopCard().CType, 1);
+                players[playerIdx].AddCardFloor(firstSlot.PopTopCard().CType, 1);
+                TakeJunk(1, playerIdx);
+                firstSlot.Reset();
+                return;
+            }
+            else if (firstSlot.cards.Count == 4)
+            {
+                // 	따닥 : 바닥에 같은 무늬 패 두 장이 있고 그걸 먹기 위해 패를 낸 다음 뒤집은 패마저 같은 무늬일 경우 네 장 모두 먹음과 동시에 상대방의 피 한 장을 가져옵니다.
+                for(int i = 0; i < firstSlot.cards.Count; i++)
+                    players[playerIdx].AddCardFloor(firstSlot.PopTopCard().CType, 1);
                 TakeJunk(1, playerIdx);
                 firstSlot.Reset();
                 return;
@@ -110,7 +118,7 @@ public class HwatooEngine
             if (secondSlot.cards.Count >= 2)
             {
                 for(int i = 0; i < secondSlot.cards.Count; i++)
-                    players[playerIdx].AddCardFloor(TODO, TODO);
+                    players[playerIdx].AddCardFloor(secondSlot.PopTopCard().CType, 1);
                 secondSlot.Reset();
             }
         }

@@ -38,7 +38,7 @@ public class Card
         this.number = num;
         this.position = pos;
         this.CType = type;
-        this.CStat = CardStat.None;
+        this.CStat = stat;
     }
 
     // setter

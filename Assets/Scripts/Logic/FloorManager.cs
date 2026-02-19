@@ -14,7 +14,7 @@ public class FloorManager
 		slots = new List<CardSlot>();
 
 		// 바닥에 12개까지 카드를 놓을 수 있음.
-		for (int i = 1; i <= SlotCnt; i++)
+		for (int i = 0; i < SlotCnt; i++)
 			slots.Add(new CardSlot(i));
 
 		startCards = new List<Card>();
@@ -23,7 +23,7 @@ public class FloorManager
 	public void Reset()
 	{
 		startCards.Clear();
-		for (int i = 1; i <= SlotCnt; i++)
+		for (int i = 0; i < SlotCnt; i++)
 		{
 			slots[i].Reset();
 		}
@@ -31,7 +31,7 @@ public class FloorManager
 
 	public bool IsEmpty()
 	{
-		for (int i = 1; i < slots.Count; i++)
+		for (int i = 0; i < slots.Count; i++)
 		{
 			if (!slots[i].IsEmpty())
 				return false;
@@ -61,7 +61,7 @@ public class FloorManager
 	public int FloorCardCount()
 	{
 		int cnt = 0;
-		for (int i = 1; i <= slots.Count; i++)
+		for (int i = 0; i < slots.Count; i++)
 			cnt += slots[i].cards.Count;
 
 		return cnt;
@@ -92,21 +92,21 @@ public class FloorManager
 		return curSlot;
 	}
 
-	public Card GetCard(int num)
-	{
-		CardSlot slot = FindSlot(num);
-
-		if (slot == null)
-			return null;
-
-		return slot.cards[0];
-	}
+	// public Card GetCard(int num)
+	// {
+	// 	CardSlot slot = FindSlot(num);
+	//
+	// 	if (slot == null)
+	// 		return null;
+	//
+	// 	return slot.PopTopCard();
+	// }
 
 	public List<Card> RemoveBonusCard()
 	{
 		List<Card> bonusCards = new List<Card>();
 
-		for (int i = 1; i <= startCards.Count; i++)
+		for (int i = 0; i < startCards.Count; i++)
 		{
 			if (startCards[i].number == 13)
 				bonusCards.Add(startCards[i]);

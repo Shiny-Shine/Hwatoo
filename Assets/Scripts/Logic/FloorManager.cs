@@ -7,7 +7,8 @@ public class FloorManager
 	private List<Card> startCards;
 
 	// 같은 번호를 하나의 슬롯에 묶어서 보관.
-	public List<CardSlot> slots { get; private set; }
+	private readonly List<CardSlot> slots;
+	public int SlotCount => slots.Count;
 
 	public FloorManager()
 	{
@@ -18,6 +19,13 @@ public class FloorManager
 			slots.Add(new CardSlot(i));
 
 		startCards = new List<Card>();
+	}
+
+	// 슬롯 인덱스에 있는 카드 개수 반환.
+	public int GetSlotCardCountByIndex(int index)
+	{
+		if (index < 0 || index >= slots.Count) return 0;
+		return slots[index].Cards.Count;
 	}
 
 	public void Reset()
@@ -62,7 +70,7 @@ public class FloorManager
 	{
 		int cnt = 0;
 		for (int i = 0; i < slots.Count; i++)
-			cnt += slots[i].cards.Count;
+			cnt += slots[i].Cards.Count;
 
 		return cnt;
 	}
@@ -72,50 +80,24 @@ public class FloorManager
 		CardSlot slot = FindSlot(num);
 		if (slot == null)
 			return 0;
-		return slot.cards.Count;
+		return slot.Cards.Count;
 	}
 
 	// 해당 위치에 카드를 놓는다.
 	public CardSlot PutCard(Card card)
 	{
+		if (card == null) return null;
 		// 해당 카드가 있는 슬롯을 찾고
 		CardSlot curSlot = FindSlot(card.number);
 		// 없다면 빈 슬롯 아무데나 놓기
 		if (curSlot == null)
 		{
 			curSlot = FindEmptySlot();
-			curSlot.PushCard(card);
-			return curSlot;
+			if (curSlot == null) return null; // 슬롯 부족 방어
 		}
 
-		slots[curSlot.position].PushCard(card);
+		curSlot.PushCard(card);
 		return curSlot;
-	}
-
-	// public Card GetCard(int num)
-	// {
-	// 	CardSlot slot = FindSlot(num);
-	//
-	// 	if (slot == null)
-	// 		return null;
-	//
-	// 	return slot.PopTopCard();
-	// }
-
-	public List<Card> RemoveBonusCard()
-	{
-		List<Card> bonusCards = new List<Card>();
-
-		for (int i = 0; i < startCards.Count; i++)
-		{
-			if (startCards[i].number == 13)
-				bonusCards.Add(startCards[i]);
-		}
-
-		for (int i = 0; i < bonusCards.Count; ++i)
-			startCards.Remove(bonusCards[i]);
-
-		return bonusCards;
 	}
 
 	public void RefreshFloor()
@@ -130,5 +112,14 @@ public class FloorManager
 	{
 		var slot = FindSlot(number);
 		return slot != null;
+	}
+
+	// 렌더링 연결용
+	public List<Card>[] GetFloorSlotsSnapshot()
+	{
+		List<Card>[] result = new List<Card>[SlotCnt];
+		for (int i = 0; i < SlotCnt; i++)
+			result[i] = new List<Card>(slots[i].Cards);
+		return result;
 	}
 }

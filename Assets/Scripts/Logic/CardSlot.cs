@@ -7,11 +7,12 @@ public class CardSlot
 {
     // 바닥 슬롯 중 해당 슬롯의 번호
     public int position { get; private set; }
-    public Stack<Card> cards { get; private set; }
+    private List<Card> cards;
+    public IReadOnlyList<Card> Cards => cards;
 
     public CardSlot(int position)
     {
-        cards = new Stack<Card>();
+        cards = new List<Card>();
         this.position = position;
         Reset();
     }
@@ -20,8 +21,11 @@ public class CardSlot
     {
         if (cards.Count <= 0)
             return null;
-
-        return cards.Pop();
+        
+        int top = cards.Count - 1;
+        Card card = cards[top];
+        cards.RemoveAt(top);
+        return card;
     }
 
     public void Reset()
@@ -32,19 +36,18 @@ public class CardSlot
     public bool IsSame(int num)
     {
         if (!IsEmpty())
-            return cards.Peek().number == num;
+            return cards[cards.Count - 1].number == num;
         
         return false;
-
     }
 
     public void PushCard(Card card)
     {
-        cards.Push(card);
+        cards.Add(card);
     }
 
     public bool IsEmpty()
     {
-        return cards.Count <= 0;
+        return cards.Count == 0;
     }
 }

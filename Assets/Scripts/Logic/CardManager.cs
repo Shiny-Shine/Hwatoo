@@ -84,10 +84,10 @@ public class CardManager
         this.cards.Add(new Card(8, 3, CardType.P));
         this.cards.Add(new Card(8, 4, CardType.P));
         // 9
-        this.cards.Add(new Card(9, 1, CardType.Y, CardStat.Sp));
         this.cards.Add(new Card(9, 2, CardType.T, CardStat.Cheongdan));
         this.cards.Add(new Card(9, 3, CardType.P));
         this.cards.Add(new Card(9, 4, CardType.P));
+        this.cards.Add(new Card(9, 1, CardType.Y, CardStat.Sp));
         // 10
         this.cards.Add(new Card(10, 1, CardType.Y));
         this.cards.Add(new Card(10, 2, CardType.T, CardStat.Cheongdan));
@@ -104,7 +104,6 @@ public class CardManager
         this.cards.Add(new Card(12, 3, CardType.T));
         this.cards.Add(new Card(12, 4, CardType.P, CardStat.Sp));
         // 조커
-        this.cards.Add(new Card(13, 1, CardType.P, CardStat.Sp));
-        this.cards.Add(new Card(13, 2, CardType.P, CardStat.Sp));
+        // TODO: 추후 조커 추가 필요
     }
 }

@@ -33,12 +33,12 @@ public class HwatooGamePresenter : MonoBehaviour
     [SerializeField] private ButtonManager startRoundButton;
 
     [SerializeField] private GameObject nineYeolPanel;
-    [SerializeField] private Button nineYeolAsYeolButton;
-    [SerializeField] private Button nineYeolAsSsangPiButton;
+    [SerializeField] private ButtonManager nineYeolAsYeolButton;
+    [SerializeField] private ButtonManager nineYeolAsSsangPiButton;
 
     [SerializeField] private GameObject goStopPanel;
-    [SerializeField] private Button goButton;
-    [SerializeField] private Button stopButton;
+    [SerializeField] private ButtonManager goButton;
+    [SerializeField] private ButtonManager stopButton;
 
     [Header("Layout")]
     [SerializeField] private float handSpacing = 1.2f;
@@ -127,6 +127,7 @@ public class HwatooGamePresenter : MonoBehaviour
         TryRunEnemyTurn();
     }
 
+    // A?I
     private void TryRunEnemyTurn()
     {
         if (flow.State != TurnFlowState.WaitingPlayCard) return;
@@ -143,6 +144,7 @@ public class HwatooGamePresenter : MonoBehaviour
         enemyRoutine = null;
     }
 
+    // 단순히 패의 첫 번째 카드를 내도록 구현, 열/고스톱 선택도 점수 기준으로 간단히 판단.
     private IEnumerator RunEnemyTurn()
     {
         while (flow.State == TurnFlowState.WaitingPlayCard && flow.CurrentPlayerIdx == 1)
@@ -152,7 +154,7 @@ public class HwatooGamePresenter : MonoBehaviour
             List<Card> enemyHand = flow.GetHandSnapshot(1);
             if (enemyHand.Count == 0) break;
 
-            ApplyResult(flow.PlayCard(enemyHand[0])); // 단순 AI
+            ApplyResult(flow.PlayCard(enemyHand[0])); // A?I, 무조건 첫 번째 카드 내기
 
             while (flow.State == TurnFlowState.WaitingNineYeolChoice)
             {
@@ -232,6 +234,7 @@ public class HwatooGamePresenter : MonoBehaviour
         goStopPanel.SetActive(myTurn && flow.State == TurnFlowState.WaitingGoStop);
     }
 
+    // 카드 생성
     private CardView Spawn(Transform parent, Card card, bool faceUp, bool clickable, Action<Card> onClick)
     {
         CardView v = Instantiate(cardViewPrefab, parent);

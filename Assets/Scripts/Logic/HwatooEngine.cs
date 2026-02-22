@@ -276,20 +276,13 @@ public class HwatooEngine
 		else if (beforeDrawMatch == 2)
 			TakeTwoFromTripleSlot(drawnSlot, playerIdx);
 
-
-		if (fManager.IsEmpty()) // 판쓰리
-		{
-			TakeJunk(1, playerIdx);
-			result.IsPanSweep = true;
-		}
-
 		return CompleteTurn(playerIdx, result);
 	}
 
 	// 턴 종료 시점 공통 후처리
 	TurnResult CompleteTurn(int playerIdx, TurnResult result)
 	{
-		if (fManager.IsEmpty())
+		if (fManager.IsEmpty()) // 판쓰리
 		{
 			TakeJunk(1, playerIdx);
 			result.IsPanSweep = true;

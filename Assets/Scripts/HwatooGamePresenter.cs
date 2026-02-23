@@ -25,6 +25,8 @@ public class HwatooGamePresenter : MonoBehaviour
     [SerializeField] private Transform myHandRoot;
     [SerializeField] private Transform enemyHandRoot;
     [SerializeField] private Transform[] floorMonthRoots = new Transform[12];
+    [SerializeField] private Transform[] myFieldRoots = new Transform[4];
+    [SerializeField] private Transform[] enemyFieldRoots = new Transform[4];
 
     [Header("UI")]
     [SerializeField] private TMP_Text statusText;
@@ -208,6 +210,8 @@ public class HwatooGamePresenter : MonoBehaviour
     private void RenderFloor()
     {
         List<Card>[] slots = flow.GetFloorSlotsSnapshot();
+        List<Card>[] myField = flow.GetFieldSnapshot(0);
+        List<Card>[] enemyField = flow.GetFieldSnapshot(1);
         int monthCount = Mathf.Min(12, floorMonthRoots.Length);
 
         for (int month = 1; month <= monthCount; month++)
@@ -219,9 +223,38 @@ public class HwatooGamePresenter : MonoBehaviour
             for (int i = 0; i < stack.Count; i++)
             {
                 CardView v = Spawn(root, stack[i], true, false, null);
-                v.transform.localPosition = new Vector3(0f, i * floorStackOffsetY, -i * 0.01f);
+                float x = (i - (stack.Count - 1) * 0.5f) * handSpacing;
+                v.transform.localPosition = new Vector3(x, i * floorStackOffsetY, -i * 0.01f);
             }
         }
+        
+        for(int i = 0; i < myField.Length; i++)
+        {
+            Transform root = myFieldRoots[i];
+            if (root == null) continue;
+
+            List<Card> stack = myField[i];
+            for (int j = 0; j < stack.Count; j++)
+            {
+                CardView v = Spawn(root, stack[j], true, false, null);
+                float x = (j - (stack.Count - 1) * 1.5f) * handSpacing;
+                v.transform.localPosition = new Vector3(x, j * floorStackOffsetY, -j * 0.01f);
+            }
+        }
+        
+        for(int i = 0; i < enemyField.Length; i++)
+        {
+            Transform root = enemyFieldRoots[i];
+            if (root == null) continue;
+
+            List<Card> stack = enemyField[i];
+            for (int j = 0; j < stack.Count; j++)
+            {
+                CardView v = Spawn(root, stack[j], true, false, null);
+                float x = (j - (stack.Count - 1) * 1.5f) * handSpacing;
+                v.transform.localPosition = new Vector3(x, j * floorStackOffsetY, -j * 0.01f);
+            }
+         }
     }
 
     private void RenderHud()

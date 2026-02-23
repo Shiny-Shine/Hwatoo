@@ -6,6 +6,7 @@ public class Player
 {
 	private int playerIdx;
 	private List<Card> handCard;
+	private List<Card>[] fieldCard = new List<Card>[4];
 	private Dictionary<CardType, int> typeCount;
 	private int nextGoMinScore;
 
@@ -37,11 +38,21 @@ public class Player
 		typeCount.Clear();
 		foreach (CardType type in Enum.GetValues(typeof(CardType)))
 			typeCount[type] = 0;
+		for (int i = 0; i < fieldCard.Length; i++)
+			fieldCard[i] = new List<Card>();
 	}
 	
 	public List<Card> GetHandSnapshot()
 	{
 		return new List<Card>(handCard);
+	}
+	
+	public List<Card>[] GetFieldSnapshot()
+	{
+		List<Card>[] snapshot = new List<Card>[4];
+		for (int i = 0; i < fieldCard.Length; i++)
+			snapshot[i] = new List<Card>(fieldCard[i]);
+		return snapshot;
 	}
 	
 	public int GetTypeCount(CardType type) => typeCount[type];
@@ -99,6 +110,7 @@ public class Player
 		{
 			case CardType.P:
 				typeCount[CardType.P] += 1;
+				fieldCard[(int)CardType.P].Add(card);
 				bool isSsangP = card.CStat == CardStat.Sp;
 				typeCount[CardType.PValue] += isSsangP ? 2 : 1;
 				if (isSsangP) typeCount[CardType.SpCount] += 1;
@@ -106,11 +118,13 @@ public class Player
 
 			case CardType.K:
 				typeCount[CardType.K] += 1;
+				fieldCard[(int)CardType.K].Add(card);
 				if (IsBiGwang(card)) typeCount[CardType.BiKwangCount] = 1;
 				break;
 
 			case CardType.Y:
 				typeCount[CardType.Y] += 1;
+				fieldCard[(int)CardType.Y].Add(card);
 				if (card.CStat == CardStat.Godori) typeCount[CardType.GodoriCount] += 1;
 				// 9월 열끗(쌍피 선택 가능) -> 일단 열로 먹고 선택 대기만 증가
 				if (card.number == 9 && card.CStat == CardStat.Sp)
@@ -119,6 +133,7 @@ public class Player
 
 			case CardType.T:
 				typeCount[CardType.T] += 1;
+				fieldCard[(int)CardType.T].Add(card);
 				if (card.CStat == CardStat.Hongdan) typeCount[CardType.HongdanCount] += 1;
 				if (card.CStat == CardStat.Cheongdan) typeCount[CardType.CheongdanCount] += 1;
 				if (card.CStat == CardStat.Chodan) typeCount[CardType.ChodanCount] += 1;

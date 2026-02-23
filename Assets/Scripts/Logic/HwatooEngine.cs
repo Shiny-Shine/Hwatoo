@@ -61,6 +61,12 @@ public class HwatooEngine
 		if (playerIdx < 0 || playerIdx >= players.Length) return new List<Card>();
 		return players[playerIdx].GetHandSnapshot();
 	}
+	
+	public List<Card>[] GetPlayerFieldSnapshot(int playerIdx)
+	{
+		if (playerIdx < 0 || playerIdx >= players.Length) return new List<Card>[4];
+		return players[playerIdx].GetFieldSnapshot();
+	}
 
 	public List<Card>[] GetFloorSlotsSnapshot()
 	{

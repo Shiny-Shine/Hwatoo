@@ -5,11 +5,11 @@ using System;
 public enum CardType
 {
 	P, // 피
-	SpCount, // 쌍피 카드 수
-	PValue, // 피 점수(쌍피 포함)
 	K, // 광
 	Y, // 열
 	T, // 띠
+	SpCount, // 쌍피 카드 수
+	PValue, // 피 점수(쌍피 포함)
 	GodoriCount, // 고도리
 	HongdanCount, // 홍단
 	CheongdanCount, // 청단

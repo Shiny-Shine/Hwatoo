@@ -38,6 +38,11 @@ public class MatchFlowController
     {
         return engine.GetFloorSlotsSnapshot();
     }
+    
+    public List<Card>[] GetFieldSnapshot(int index)
+    {
+        return engine.GetPlayerFieldSnapshot(index);
+    }
 
     public int GetScore(int playerIdx)
     {

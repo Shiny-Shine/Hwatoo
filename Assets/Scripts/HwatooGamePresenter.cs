@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Michsky.MUIP;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class HwatooGamePresenter : MonoBehaviour
@@ -20,10 +21,10 @@ public class HwatooGamePresenter : MonoBehaviour
     [SerializeField] private CardView cardViewPrefab;
     [SerializeField] private Sprite backSprite;
     [SerializeField] private CardSpriteBinding[] faceBindings;
-
+    
     [Header("Roots")]
-    [SerializeField] private Transform myHandRoot;
-    [SerializeField] private Transform enemyHandRoot;
+    [SerializeField] private Transform[] myHandRoots;
+    [SerializeField] private Transform[] enemyHandRoots;
     [SerializeField] private Transform[] floorMonthRoots = new Transform[12];
     [SerializeField] private Transform[] myFieldRoots = new Transform[4];
     [SerializeField] private Transform[] enemyFieldRoots = new Transform[4];
@@ -43,9 +44,8 @@ public class HwatooGamePresenter : MonoBehaviour
     [SerializeField] private ButtonManager stopButton;
 
     [Header("Layout")]
-    [SerializeField] private float handSpacing = 1.2f;
-    [SerializeField] private float floorStackOffsetY = 0.18f;
-    [SerializeField] private float aiDelay = 0.35f;
+    [SerializeField] private float handSpacing = 2f;
+    [SerializeField] private float aiDelay = 0.5f;
 
     private readonly MatchFlowController flow = new MatchFlowController();
     private readonly List<CardView> spawnedViews = new List<CardView>();
@@ -193,16 +193,14 @@ public class HwatooGamePresenter : MonoBehaviour
 
         for (int i = 0; i < myHand.Count; i++)
         {
-            CardView v = Spawn(myHandRoot, myHand[i], true, canClickMyHand, OnClickMyCard);
-            float x = (i - (myHand.Count - 1) * 0.5f) * handSpacing;
-            v.transform.localPosition = new Vector3(x, 0f, -i * 0.01f);
+            CardView v = Spawn(myHandRoots[i], myHand[i], true, canClickMyHand, OnClickMyCard);
+            v.transform.localPosition = Vector3.zero;
         }
 
         for (int i = 0; i < enemyHand.Count; i++)
         {
-            CardView v = Spawn(enemyHandRoot, enemyHand[i], false, false, null);
-            float x = (i - (enemyHand.Count - 1) * 0.5f) * handSpacing;
-            v.transform.localPosition = new Vector3(x, 0f, -i * 0.01f);
+            CardView v = Spawn(enemyHandRoots[i], enemyHand[i], false, false, null);
+            v.transform.localPosition = Vector3.zero;
         }
     }
 
@@ -224,7 +222,7 @@ public class HwatooGamePresenter : MonoBehaviour
             {
                 CardView v = Spawn(root, stack[i], true, false, null);
                 float x = (i - (stack.Count - 1) * 0.5f) * handSpacing;
-                v.transform.localPosition = new Vector3(x, i * floorStackOffsetY, -i * 0.01f);
+                v.transform.localPosition = new Vector3(x, 0f, -i * 0.01f);
             }
         }
         
@@ -234,11 +232,18 @@ public class HwatooGamePresenter : MonoBehaviour
             if (root == null) continue;
 
             List<Card> stack = myField[i];
+            float x = 0f;
+            float y = 0f;
             for (int j = 0; j < stack.Count; j++)
             {
                 CardView v = Spawn(root, stack[j], true, false, null);
-                float x = (j - (stack.Count - 1) * 1.5f) * handSpacing;
-                v.transform.localPosition = new Vector3(x, j * floorStackOffsetY, -j * 0.01f);
+                x += handSpacing;
+                if (j % 7 == 0 && j != 0)
+                {
+                    x = 0;
+                    y = -12f;
+                }
+                v.transform.localPosition = new Vector3(x, y, -j * 0.01f);
             }
         }
         
@@ -248,11 +253,19 @@ public class HwatooGamePresenter : MonoBehaviour
             if (root == null) continue;
 
             List<Card> stack = enemyField[i];
+            
+            float x = 0f;
+            float y = 0f;
             for (int j = 0; j < stack.Count; j++)
             {
                 CardView v = Spawn(root, stack[j], true, false, null);
-                float x = (j - (stack.Count - 1) * 1.5f) * handSpacing;
-                v.transform.localPosition = new Vector3(x, j * floorStackOffsetY, -j * 0.01f);
+                x += handSpacing;
+                if (j % 7 == 0 && j != 0)
+                {
+                    x = 0;
+                    y = 12f;
+                }
+                v.transform.localPosition = new Vector3(x, y, -j * 0.01f);
             }
          }
     }
